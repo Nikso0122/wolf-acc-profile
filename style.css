@@ -56,3 +56,27 @@ body::after {
     z-index: 10000;
     pointer-events: none;
 }
+
+
+/* Кнопка "Сообщить о проблеме" */
+.btn.btn-danger {
+    background-color: #7c5cff;
+    border-color: #7c5cff;
+    color: #ffffff;
+}
+
+/* При наведении */
+.btn.btn-danger:hover {
+    background-color: #6748e8;
+    border-color: #6748e8;
+    color: #ffffff;
+}
+
+/* При нажатии */
+.btn.btn-danger:active,
+.btn.btn-danger:focus {
+    background-color: #583bd1;
+    border-color: #583bd1;
+    color: #ffffff;
+    box-shadow: none;
+}
