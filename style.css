@@ -57,27 +57,19 @@ body::after {
     pointer-events: none;
 }
 
-/* Кнопка "Сообщить о проблеме" — приоритетный стиль */
-button.btn.btn-danger[name="reportBug"] {
-    background-color: #7c5cff !important;
-    border-color: #7c5cff !important;
-    color: #ffffff !important;
-}
-
-/* Наведение */
-button.btn.btn-danger[name="reportBug"]:hover {
-    background-color: #6748e8 !important;
-    border-color: #6748e8 !important;
-    color: #ffffff !important;
-}
-
-/* Нажатие / фокус */
-button.btn.btn-danger[name="reportBug"]:active,
-button.btn.btn-danger[name="reportBug"]:focus {
-    background-color: #583bd1 !important;
-    border-color: #583bd1 !important;
-    color: #ffffff !important;
-    box-shadow: none !important;
+.fas.fa-mars {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 30px;
+    height: 30px;
+    
+    border-radius: 50%;
+    background-color: #7c5cff;
+    color: white;
+    
+    font-size: 16px;
 }
 
 /* Иконка жука */
