@@ -1,14 +1,58 @@
-
-
-* {
-    background-color: black;
-    color: red;
+body {
+    background-color: #000 !important;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
+        url('https://media.giphy.com/media/4GcG7PxQx1SzZhBRNw/giphy.gif') !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+    background-position: center !important;
 }
 
-div:hover {
-    height: 100px;
-    width: 200px;
-    color: yellow;
-    border: 10px;
-    font-style: bold;
+body::before {
+    content: "";
+    position: fixed;
+    top: -100%; left: 0;
+    width: 100%; height: 200%;
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+    background-size: 500px 500px;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 2;
+    will-change: transform;
+    animation: glacierSnow 20s linear infinite;
+}
+
+@keyframes glacierSnow {
+    from { transform: translate3d(0, 0, 0); }
+    to { transform: translate3d(0, 500px, 0); }
+}
+
+#main, #inner-content, .card, .card-body, .table, .table tr, .table td, .table-responsive, .table-striped tbody tr:nth-of-type(odd) {
+    background: rgba(0, 0, 0, 0.4) !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    text-shadow: 1px 1px 2px #000;
+}
+
+#run-den-name, .den-name, h1 {
+    color: #ffffff !important;
+    font-family: 'Georgia', serif !important;
+    text-shadow: 2px 2px 10px #000 !important;
+    text-transform: lowercase;
+    font-style: italic;
+}
+
+body::after {
+    content: "YOU ARE GAY";
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-family: 'Courier New', Courier, monospace !important;
+    font-size: 14px;
+    font-weight: bold;
+    color: #FF0000;
+    text-shadow: 2px 2px 8px #000;
+    z-index: 10000;
+    pointer-events: none;
 }
