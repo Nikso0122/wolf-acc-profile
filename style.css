@@ -57,26 +57,30 @@ body::after {
     pointer-events: none;
 }
 
-
-/* Кнопка "Сообщить о проблеме" */
-.btn.btn-danger {
-    background-color: #7c5cff;
-    border-color: #7c5cff;
-    color: #ffffff;
+/* Кнопка "Сообщить о проблеме" — приоритетный стиль */
+button.btn.btn-danger[name="reportBug"] {
+    background-color: #7c5cff !important;
+    border-color: #7c5cff !important;
+    color: #ffffff !important;
 }
 
-/* При наведении */
-.btn.btn-danger:hover {
-    background-color: #6748e8;
-    border-color: #6748e8;
-    color: #ffffff;
+/* Наведение */
+button.btn.btn-danger[name="reportBug"]:hover {
+    background-color: #6748e8 !important;
+    border-color: #6748e8 !important;
+    color: #ffffff !important;
 }
 
-/* При нажатии */
-.btn.btn-danger:active,
-.btn.btn-danger:focus {
-    background-color: #583bd1;
-    border-color: #583bd1;
-    color: #ffffff;
-    box-shadow: none;
+/* Нажатие / фокус */
+button.btn.btn-danger[name="reportBug"]:active,
+button.btn.btn-danger[name="reportBug"]:focus {
+    background-color: #583bd1 !important;
+    border-color: #583bd1 !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+
+/* Иконка жука */
+button.btn.btn-danger[name="reportBug"] i {
+    color: #ffffff !important;
 }
