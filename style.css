@@ -76,3 +76,8 @@ body::after {
 button.btn.btn-danger[name="reportBug"] i {
     color: #ffffff !important;
 }
+
+
+img {
+    border-radius: 12px;
+}
