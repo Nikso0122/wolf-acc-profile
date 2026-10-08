@@ -43,7 +43,7 @@
   display:flex;
   gap:4px;
 
-  height:180px;
+  height:200px;
 
   padding:4px;
 
@@ -193,7 +193,7 @@
 
 .wd .wd-ruler{
   display:flex;
-  align-items:center;
+  align-items:flex-start;
 
   gap:22px;
 
@@ -219,8 +219,6 @@
 
 .wd .wd-ruler.rev{
   flex-direction:row-reverse;
-
-  text-align:right;
 }
 
 .wd .wd-img{
@@ -249,8 +247,31 @@
   object-fit:cover;
 }
 
+.wd .wd-info{
+  flex:1;
+
+  min-width:0;
+}
+
+/* name + rank on one line, same level in both cards */
+.wd .wd-head{
+  display:flex;
+  align-items:center;
+
+  gap:12px;
+
+  margin-bottom:12px;
+  padding-bottom:10px;
+
+  border-bottom:1px solid rgba(111,143,166,.28);
+}
+
+.wd .wd-ruler.rev .wd-head{
+  flex-direction:row-reverse;
+}
+
 .wd .wd-name{
-  margin-bottom:4px;
+  margin:0;
 
   color:#e1a5a5;
 
@@ -258,6 +279,8 @@
 
   font-size:22px;
   font-weight:700;
+
+  line-height:1.2;
 }
 
 .wd .wd-role{
@@ -265,7 +288,7 @@
 
   padding:2px 10px;
 
-  margin-bottom:10px;
+  margin:0;
 
   color:#a9c4d4;
 
@@ -278,60 +301,22 @@
   text-transform:uppercase;
 }
 
+/* evenly stretched text */
 .wd .wd-bio{
   color:#cfdde7;
 
   font-size:13.5px;
 
-  line-height:1.6;
+  line-height:1.7;
+
+  text-align:justify;
+  text-justify:inter-word;
+
+  hyphens:auto;
 }
 
-
-/* =========================================================
-   SUCCESSION NOTE
-   ========================================================= */
-
-.wd .wd-note{
-  max-width:640px;
-
-  margin:18px auto 0;
-
-  padding:16px 22px;
-
-  text-align:center;
-
-  background:linear-gradient(
-    145deg,
-    rgba(52,80,95,.32),
-    rgba(16,27,35,.55)
-  );
-
-  border:1px solid #395464;
-  border-radius:9px;
-}
-
-.wd .wd-note-title{
-  margin-bottom:8px;
-
-  color:#d0dde3;
-
-  font-family:'Libre Baskerville',Georgia,serif;
-
-  font-size:15px;
-  font-weight:700;
-}
-
-.wd .wd-note p{
-  margin:0 0 8px;
-
-  color:#b4c7d1;
-
-  font-size:13px;
-  line-height:1.65;
-}
-
-.wd .wd-note p:last-child{
-  margin-bottom:0;
+.wd .wd-ruler.rev .wd-bio{
+  text-align-last:right;
 }
 
 
@@ -483,10 +468,9 @@
 
 .wd .wd-legend{
   display:flex;
+  flex-direction:column;
 
-  justify-content:center;
-
-  gap:32px;
+  gap:9px;
 
   margin-top:17px;
   padding-top:13px;
@@ -496,6 +480,13 @@
   color:#a7bac5;
 
   font-size:12px;
+}
+
+.wd .legend-row{
+  display:flex;
+  justify-content:center;
+
+  gap:32px;
 }
 
 .wd .legend-item{
@@ -523,6 +514,28 @@
   height:9px;
 
   background:#718b99;
+}
+
+/* outline samples: sex of the wolf */
+.wd .legend-outline{
+  display:inline-block;
+
+  width:11px;
+  height:11px;
+
+  background:transparent;
+
+  border-radius:3px;
+}
+
+.wd .legend-outline.light{
+  border:2px solid #d4e3ec;
+}
+
+.wd .legend-outline.dark{
+  border:2px solid #2c4455;
+
+  background:rgba(44,68,85,.35);
 }
 
 
@@ -679,7 +692,7 @@
   }
 
   .wd .wd-top{
-    height:210px;
+    height:250px;
   }
 
   .wd .wd-tab:hover{
@@ -696,8 +709,6 @@
     flex-direction:column;
 
     align-items:center;
-
-    text-align:center;
   }
 
   .wd .wd-img{
@@ -707,7 +718,20 @@
     height:250px;
   }
 
-  .wd .wd-legend{
+  .wd .wd-head,
+  .wd .wd-ruler.rev .wd-head{
+    flex-direction:column;
+
+    gap:8px;
+
+    text-align:center;
+  }
+
+  .wd .wd-ruler.rev .wd-bio{
+    text-align-last:left;
+  }
+
+  .wd .legend-row{
     flex-direction:column;
 
     gap:7px;
