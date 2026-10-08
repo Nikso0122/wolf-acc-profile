@@ -1,325 +1,590 @@
-/* =========================
-   PROFILE
-   ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Nunito+Sans:wght@400;500;600;700&display=swap');
 
-.profile {
-    width: min(900px, 94%);
-    margin: 35px auto;
-    padding: 0;
 
-    color: #3d3a36;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    line-height: 1.65;
+/* =========================================================
+   MAIN
+   ========================================================= */
 
-    box-sizing: border-box;
+.rp{
+  max-width:760px;
+
+  margin:0 auto;
+  padding:16px;
+
+  background:linear-gradient(
+    180deg,
+    #1b2b37 0%,
+    #121c25 100%
+  );
+
+  color:#dbe6ee;
+
+  font-family:'Nunito Sans','Segoe UI',Arial,sans-serif;
+
+  font-size:14px;
+  line-height:1.55;
+
+  border:1px solid #2f4658;
+  border-radius:8px;
+
+  box-shadow:0 4px 18px rgba(0,0,0,.35);
+
+  box-sizing:border-box;
 }
 
-.profile *,
-.profile *::before,
-.profile *::after {
-    box-sizing: border-box;
-}
-
-
-/* =========================
-   HEADER
-   ========================= */
-
-.profile-header {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-
-    margin-bottom: 22px;
-    padding: 20px 24px;
-
-    background: rgba(255, 255, 255, 0.72);
-    border: 1px solid rgba(100, 95, 88, 0.16);
-    border-radius: 16px;
+.rp *{
+  box-sizing:border-box;
 }
 
 
-/* PHOTO */
+/* =========================================================
+   TOP / INTRO
+   ========================================================= */
 
-.avatar {
-    width: 145px;
-    height: 145px;
+.rp .rp-top{
+  display:flex;
 
-    flex: 0 0 145px;
+  gap:18px;
 
-    overflow: hidden;
-    border-radius: 14px;
+  min-height:190px;
 
-    background: rgba(0, 0, 0, 0.04);
-}
+  padding:12px;
 
-.avatar img {
-    display: block;
+  background:#0d151c;
 
-    width: 100%;
-    height: 100%;
+  border:1px solid #4a6a7e;
+  border-radius:6px;
 
-    object-fit: cover;
-    border-radius: 14px;
+  overflow:hidden;
 }
 
 
-/* HEADER TEXT */
+/* =========================================================
+   PHOTO
+   ========================================================= */
 
-.header-info {
-    min-width: 0;
+.rp .rp-photo{
+  flex:0 0 165px;
+
+  width:165px;
+  height:165px;
+
+  margin:auto 0;
+
+  overflow:hidden;
+
+  background:#1f3140;
+
+  border:3px solid #6f8fa6;
+  border-radius:14px;
+
+  box-shadow:
+    0 0 18px rgba(111,143,166,.28);
 }
 
-.header-info h1 {
-    margin: 0;
+.rp .rp-photo img{
+  display:block;
 
-    font-size: 34px;
-    line-height: 1.1;
-    font-weight: 600;
+  width:100%;
+  height:100%;
 
-    color: #36332f;
-}
+  object-fit:cover;
 
-.nickname {
-    margin-top: 5px;
-
-    font-size: 18px;
-    color: #77716a;
-}
-
-.age {
-    margin-top: 3px;
-
-    font-size: 13px;
-    color: #9a938b;
-}
-
-
-/* =========================
-   SECTIONS
-   ========================= */
-
-.profile-section {
-    margin-bottom: 18px;
-    padding: 22px 25px;
-
-    background: rgba(255, 255, 255, 0.66);
-
-    border: 1px solid rgba(100, 95, 88, 0.13);
-    border-radius: 16px;
-}
-
-.profile-section h2 {
-    margin: 0 0 13px;
-
-    font-size: 19px;
-    line-height: 1.3;
-    font-weight: 600;
-
-    color: #45413d;
-}
-
-.profile-section p {
-    margin: 9px 0 0;
-}
-
-.profile-section p:first-of-type {
-    margin-top: 0;
-}
-
-.profile-section b {
-    color: #4a4641;
+  border-radius:10px;
 }
 
 
-/* =========================
-   ONLINE INFO
-   ========================= */
+/* =========================================================
+   INTRO TEXT
+   ========================================================= */
 
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+.rp .rp-intro{
+  flex:1;
 
-    margin-bottom: 15px;
+  min-width:0;
+
+  padding:8px 8px 8px 4px;
 }
 
-.info-box {
-    padding: 12px 13px;
+.rp .rp-name{
+  margin:0;
 
-    background: rgba(245, 243, 239, 0.75);
-    border: 1px solid rgba(100, 95, 88, 0.1);
-    border-radius: 11px;
+  color:#e1a5a5;
+
+  font-family:'Libre Baskerville',Georgia,serif;
+
+  font-size:25px;
+  font-weight:700;
+
+  line-height:1.25;
 }
 
-.info-box span {
-    display: block;
+.rp .rp-nick{
+  margin-top:2px;
+
+  color:#b9cbd5;
+
+  font-family:'Libre Baskerville',Georgia,serif;
+
+  font-size:16px;
 }
 
-.info-box .label {
-    margin-bottom: 2px;
+.rp .rp-age{
+  margin-top:2px;
 
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
+  color:#8fa8b7;
 
-    color: #999189;
+  font-size:11px;
+
+  letter-spacing:1.5px;
+  text-transform:uppercase;
 }
 
-.info-box .value {
-    font-size: 13px;
-    color: #4b4742;
+.rp .rp-intro p{
+  margin:15px 0 0;
+
+  color:#c7d6de;
+
+  font-size:13px;
+
+  line-height:1.65;
 }
 
 
-/* =========================
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+.rp .rp-h2{
+  display:flex;
+  align-items:center;
+
+  gap:14px;
+
+  margin:28px 0 12px;
+
+  color:#c4d6df;
+
+  font-family:'Libre Baskerville',Georgia,serif;
+
+  font-size:18px;
+  font-weight:400;
+
+  letter-spacing:.4px;
+
+  text-align:center;
+}
+
+.rp .rp-h2:before,
+.rp .rp-h2:after{
+  content:"";
+
+  flex:1;
+
+  height:1px;
+}
+
+.rp .rp-h2:before{
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #4a6a7e
+    );
+}
+
+.rp .rp-h2:after{
+  background:
+    linear-gradient(
+      90deg,
+      #4a6a7e,
+      transparent
+    );
+}
+
+
+/* =========================================================
+   ONLINE
+   ========================================================= */
+
+.rp .rp-online{
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:7px;
+
+  margin:0;
+}
+
+.rp .rp-online-item{
+  min-width:0;
+
+  padding:10px 9px;
+
+  background:rgba(255,255,255,.025);
+
+  border:1px solid rgba(65,88,102,.55);
+
+  border-radius:7px;
+
+  text-align:center;
+}
+
+.rp .rp-label{
+  display:block;
+
+  margin-bottom:3px;
+
+  color:#8fa8b7;
+
+  font-size:9px;
+
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+}
+
+.rp .rp-value{
+  display:block;
+
+  color:#c9d8e0;
+
+  font-size:12px;
+}
+
+
+/* =========================================================
+   GENERAL TEXT
+   ========================================================= */
+
+.rp .rp-text{
+  color:#c7d6de;
+
+  font-size:13.5px;
+
+  line-height:1.7;
+
+  text-align:justify;
+  text-justify:inter-word;
+}
+
+.rp .rp-text p{
+  margin:0 0 10px;
+}
+
+.rp .rp-text p:last-child{
+  margin-bottom:0;
+}
+
+
+/* =========================================================
    SHOP
-   ========================= */
+   ========================================================= */
 
-.shop-list {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+.rp .rp-shop{
+  display:flex;
 
-    margin: 12px 0 15px;
+  flex-direction:column;
+
+  gap:7px;
+
+  margin-bottom:13px;
 }
 
-.shop-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.rp .rp-shop-item{
+  display:flex;
 
-    padding: 10px 14px;
+  align-items:center;
+  justify-content:space-between;
 
-    background: rgba(246, 244, 240, 0.72);
-    border-radius: 10px;
+  gap:15px;
+
+  padding:10px 13px;
+
+  background:rgba(255,255,255,.025);
+
+  border:1px solid rgba(65,88,102,.55);
+
+  border-radius:7px;
+
+  transition:
+    background .2s ease,
+    border-color .2s ease;
 }
 
-.shop-item > div {
-    display: flex;
-    align-items: baseline;
-    gap: 9px;
+.rp .rp-shop-item:hover{
+  background:rgba(255,255,255,.045);
+
+  border-color:#456273;
 }
 
-.shop-item strong {
-    font-weight: 600;
+.rp .rp-shop-item > div{
+  display:flex;
+
+  align-items:baseline;
+
+  gap:9px;
 }
 
-.shop-item span {
-    font-size: 12px;
-    color: #99928a;
+.rp .rp-shop-name{
+  color:#d4e1e8;
+
+  font-size:13px;
+  font-weight:600;
 }
 
-.shop-item > b {
-    white-space: nowrap;
-    font-weight: 600;
-    color: #625d56;
+.rp .rp-shop-desc{
+  color:#899faa;
+
+  font-size:11px;
 }
 
+.rp .rp-price{
+  color:#e0aaaa;
 
-/* =========================
-   SMALL NOTE
-   ========================= */
+  font-size:13px;
+  font-weight:600;
 
-.small-note {
-    color: #77716a;
-    font-style: italic;
-}
-
-
-/* =========================
-   INTERESTS
-   ========================= */
-
-.interests {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-
-    margin-bottom: 15px;
-}
-
-.interests span {
-    padding: 5px 11px;
-
-    border: 1px solid rgba(100, 95, 88, 0.14);
-    border-radius: 20px;
-
-    background: rgba(245, 243, 239, 0.72);
-
-    font-size: 12px;
-    color: #625d57;
+  white-space:nowrap;
 }
 
 
-/* =========================
-   ART SECTION
-   ========================= */
+/* =========================================================
+   NOTE
+   ========================================================= */
 
-.art-section {
-    margin-bottom: 0;
+.rp .rp-note{
+  margin-top:13px;
+
+  padding:10px 14px;
+
+  color:#aebfc9;
+
+  font-size:12.5px;
+
+  text-align:center;
+
+  background:rgba(255,255,255,.025);
+
+  border-left:2px solid #617f90;
+  border-right:2px solid #617f90;
+
+  border-radius:4px;
 }
 
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+/* =========================================================
+   INTEREST TAGS
+   ========================================================= */
 
-@media (max-width: 700px) {
+.rp .rp-tags{
+  display:flex;
 
-    .profile {
-        width: 94%;
-        margin: 20px auto;
-    }
+  flex-wrap:wrap;
 
-    .profile-header {
-        gap: 18px;
-        padding: 17px;
-    }
+  justify-content:center;
 
-    .avatar {
-        width: 110px;
-        height: 110px;
-        flex-basis: 110px;
-    }
+  gap:7px;
 
-    .header-info h1 {
-        font-size: 27px;
-    }
+  margin-bottom:14px;
+}
 
-    .nickname {
-        font-size: 16px;
-    }
+.rp .rp-tags span{
+  padding:5px 11px;
 
-    .info-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  color:#bfd0da;
+
+  background:rgba(255,255,255,.025);
+
+  border:1px solid #405c6c;
+
+  border-radius:12px;
+
+  font-size:11px;
+
+  transition:
+    background .2s ease,
+    border-color .2s ease;
+}
+
+.rp .rp-tags span:hover{
+  background:rgba(255,255,255,.05);
+
+  border-color:#5c7788;
 }
 
 
-@media (max-width: 480px) {
+/* =========================================================
+   ART
+   ========================================================= */
 
-    .profile-header {
-        align-items: flex-start;
-    }
+.rp .rp-art{
+  display:flex;
 
-    .avatar {
-        width: 90px;
-        height: 90px;
-        flex-basis: 90px;
-    }
+  align-items:flex-start;
 
-    .profile-section {
-        padding: 18px;
-    }
+  gap:17px;
 
-    .info-grid {
-        grid-template-columns: 1fr;
-    }
+  padding:16px;
 
-    .shop-item > div {
-        flex-direction: column;
-        gap: 0;
-    }
+  background:
+    linear-gradient(
+      145deg,
+      rgba(52,80,95,.24),
+      rgba(16,27,35,.42)
+    );
+
+  border:1px solid #395464;
+
+  border-radius:9px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.035);
+}
+
+.rp .rp-art-mark{
+  flex:0 0 42px;
+
+  width:42px;
+  height:42px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  color:#e1a5a5;
+
+  border:1px solid #6f8fa6;
+
+  border-radius:50%;
+
+  font-family:'Libre Baskerville',Georgia,serif;
+
+  font-size:18px;
+}
+
+.rp .rp-art-text{
+  flex:1;
+
+  min-width:0;
+
+  color:#c7d6de;
+
+  font-size:13.5px;
+
+  line-height:1.7;
+}
+
+.rp .rp-art-text p{
+  margin:0 0 9px;
+}
+
+.rp .rp-art-text p:last-child{
+  margin-bottom:0;
+}
+
+
+/* =========================================================
+   LINKS / BOLD / ITALIC
+   ========================================================= */
+
+.rp a{
+  color:#d9a4a4;
+
+  text-decoration:none;
+}
+
+.rp a:hover{
+  color:#efbaba;
+}
+
+.rp b{
+  color:#d5e2e9;
+}
+
+.rp i{
+  color:#b8cad4;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:560px){
+
+  .rp{
+    padding:12px;
+  }
+
+  .rp .rp-top{
+    flex-direction:column;
+
+    align-items:center;
+
+    min-height:0;
+
+    padding:14px;
+  }
+
+  .rp .rp-photo{
+    width:150px;
+    height:150px;
+
+    flex-basis:150px;
+  }
+
+  .rp .rp-intro{
+    width:100%;
+
+    padding:3px 4px 5px;
+
+    text-align:center;
+  }
+
+  .rp .rp-name{
+    font-size:23px;
+  }
+
+  .rp .rp-intro p{
+    text-align:left;
+  }
+
+  .rp .rp-online{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .rp .rp-shop-item > div{
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:0;
+  }
+
+  .rp .rp-art{
+    gap:12px;
+  }
+
+}
+
+
+@media(max-width:360px){
+
+  .rp .rp-online{
+    grid-template-columns:1fr;
+  }
+
+  .rp .rp-art{
+    flex-direction:column;
+
+    align-items:center;
+  }
+
+  .rp .rp-art-text{
+    text-align:center;
+  }
+
 }
