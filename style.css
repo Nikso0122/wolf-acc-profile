@@ -1,4 +1,3 @@
-```css
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Nunito+Sans:wght@400;500;600;700&display=swap');
 
 
@@ -44,7 +43,7 @@
   display:flex;
   gap:4px;
 
-  height:150px;
+  height:180px;
 
   padding:4px;
 
@@ -122,29 +121,12 @@
 
 /* TOP TAB COLOURS */
 
-.wd .t1{
-  background-color:#2f5169;
-}
-
-.wd .t2{
-  background-color:#3b6a86;
-}
-
-.wd .t3{
-  background-color:#27465c;
-}
-
-.wd .t4{
-  background-color:#4f7f9b;
-}
-
-.wd .t5{
-  background-color:#1f3a4d;
-}
-
-.wd .t6{
-  background-color:#5d8ea8;
-}
+.wd .t1{ background-color:#2f5169; }
+.wd .t2{ background-color:#3b6a86; }
+.wd .t3{ background-color:#27465c; }
+.wd .t4{ background-color:#4f7f9b; }
+.wd .t5{ background-color:#1f3a4d; }
+.wd .t6{ background-color:#5d8ea8; }
 
 
 /* =========================================================
@@ -196,22 +178,12 @@
 
 .wd .wd-h1:before,
 .wd .wd-h2:before{
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      #4a6a7e
-    );
+  background:linear-gradient(90deg, transparent, #4a6a7e);
 }
 
 .wd .wd-h1:after,
 .wd .wd-h2:after{
-  background:
-    linear-gradient(
-      90deg,
-      #4a6a7e,
-      transparent
-    );
+  background:linear-gradient(90deg, #4a6a7e, transparent);
 }
 
 
@@ -221,19 +193,19 @@
 
 .wd .wd-ruler{
   display:flex;
-  align-items:flex-start;
+  align-items:center;
 
-  gap:16px;
+  gap:22px;
 
-  margin:14px 0;
+  margin:16px 0;
 
-  padding:14px;
+  padding:18px;
 
   background:rgba(255,255,255,.03);
 
   border:1px solid #2a4052;
 
-  border-radius:8px;
+  border-radius:10px;
 
   transition:
     background .2s ease,
@@ -252,12 +224,12 @@
 }
 
 .wd .wd-img{
-  flex:0 0 100px;
+  flex:0 0 190px;
 
-  width:100px;
-  height:130px;
+  width:190px;
+  height:230px;
 
-  border-radius:50%;
+  border-radius:16px;
 
   border:3px solid #6f8fa6;
 
@@ -265,8 +237,7 @@
 
   background:#1f3140;
 
-  box-shadow:
-    0 0 14px rgba(111,143,166,.35);
+  box-shadow:0 0 18px rgba(111,143,166,.35);
 }
 
 .wd .wd-img img{
@@ -285,7 +256,7 @@
 
   font-family:'Libre Baskerville',Georgia,serif;
 
-  font-size:20px;
+  font-size:22px;
   font-weight:700;
 }
 
@@ -317,6 +288,54 @@
 
 
 /* =========================================================
+   SUCCESSION NOTE
+   ========================================================= */
+
+.wd .wd-note{
+  max-width:640px;
+
+  margin:18px auto 0;
+
+  padding:16px 22px;
+
+  text-align:center;
+
+  background:linear-gradient(
+    145deg,
+    rgba(52,80,95,.32),
+    rgba(16,27,35,.55)
+  );
+
+  border:1px solid #395464;
+  border-radius:9px;
+}
+
+.wd .wd-note-title{
+  margin-bottom:8px;
+
+  color:#d0dde3;
+
+  font-family:'Libre Baskerville',Georgia,serif;
+
+  font-size:15px;
+  font-weight:700;
+}
+
+.wd .wd-note p{
+  margin:0 0 8px;
+
+  color:#b4c7d1;
+
+  font-size:13px;
+  line-height:1.65;
+}
+
+.wd .wd-note p:last-child{
+  margin-bottom:0;
+}
+
+
+/* =========================================================
    WOLF DEN SPOILER BUTTONS
    ========================================================= */
 
@@ -336,7 +355,6 @@
 
   letter-spacing:.2px;
 }
-
 
 /* CONTENT THAT APPEARS UNDER SPOILER */
 
@@ -379,19 +397,17 @@
 .wd .wd-tree-card{
   padding:20px 24px 17px;
 
-  background:
-    linear-gradient(
-      145deg,
-      rgba(52,80,95,.32),
-      rgba(16,27,35,.55)
-    );
+  background:linear-gradient(
+    145deg,
+    rgba(52,80,95,.32),
+    rgba(16,27,35,.55)
+  );
 
   border:1px solid #395464;
 
   border-radius:9px;
 
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.035);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.035);
 }
 
 .wd .wd-tree-title{
@@ -453,8 +469,7 @@
 .wd .wd-tree-link span{
   font-size:16px;
 
-  transition:
-    transform .2s ease;
+  transition:transform .2s ease;
 }
 
 .wd .wd-tree-link:hover span{
@@ -563,6 +578,37 @@
   margin:0 auto;
 }
 
+.wd .wd-rule-group{
+  display:flex;
+  align-items:center;
+
+  gap:12px;
+
+  margin:22px 0 6px;
+
+  color:#9fbccd;
+
+  font-size:11px;
+  font-weight:700;
+
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.wd .wd-rule-group:first-child{
+  margin-top:0;
+}
+
+.wd .wd-rule-group:after{
+  content:"";
+
+  flex:1;
+
+  height:1px;
+
+  background:linear-gradient(90deg, #4a6a7e, transparent);
+}
+
 .wd .wd-rule{
   display:flex;
   align-items:flex-start;
@@ -632,6 +678,10 @@
     padding:12px;
   }
 
+  .wd .wd-top{
+    height:210px;
+  }
+
   .wd .wd-tab:hover{
     width:240px;
   }
@@ -651,8 +701,10 @@
   }
 
   .wd .wd-img{
-    width:105px;
-    height:105px;
+    flex:0 0 auto;
+
+    width:210px;
+    height:250px;
   }
 
   .wd .wd-legend{
@@ -670,4 +722,3 @@
   }
 
 }
-```
