@@ -7,8 +7,9 @@
 
 .rp{
   max-width:760px;
+
   margin:0 auto;
-  padding:12px 15px;
+  padding:11px 14px;
 
   background:linear-gradient(
     180deg,
@@ -19,6 +20,7 @@
   color:#dbe6ee;
 
   font-family:'Nunito Sans','Segoe UI',Arial,sans-serif;
+
   font-size:13px;
   line-height:1.5;
 
@@ -43,9 +45,9 @@
   display:flex;
   align-items:center;
 
-  gap:18px;
+  gap:16px;
 
-  padding:9px;
+  padding:8px;
 
   background:#0d151c;
 
@@ -59,19 +61,19 @@
    ========================================================= */
 
 .rp .rp-photo{
-  flex:0 0 235px;
+  flex:0 0 155px;
 
-  width:235px;
-  height:155px;
+  width:155px;
+  height:190px;
 
   overflow:hidden;
 
   background:#1f3140;
 
   border:2px solid #6f8fa6;
-  border-radius:9px;
+  border-radius:8px;
 
-  box-shadow:0 0 12px rgba(111,143,166,.25);
+  box-shadow:0 0 12px rgba(111,143,166,.22);
 }
 
 .rp .rp-photo img{
@@ -83,7 +85,7 @@
   object-fit:cover;
   object-position:center;
 
-  border-radius:7px;
+  border-radius:6px;
 }
 
 
@@ -94,6 +96,8 @@
 .rp .rp-intro{
   flex:1;
   min-width:0;
+
+  padding:3px 5px;
 }
 
 .rp .rp-name{
@@ -101,29 +105,40 @@
 
   font-family:'Libre Baskerville',Georgia,serif;
 
-  font-size:24px;
+  font-size:25px;
   font-weight:700;
 
   line-height:1.15;
 }
 
 .rp .rp-nick{
-  margin-top:2px;
+  margin-top:3px;
 
-  color:#8fa8b7;
+  color:#91a8b7;
 
   font-size:11px;
 
   letter-spacing:.8px;
 }
 
-.rp .rp-intro p{
-  margin:11px 0 0;
+.rp .rp-line{
+  width:65px;
+  height:1px;
 
-  color:#c7d6de;
+  margin:11px 0 10px;
+
+  background:#5d7a8b;
+}
+
+.rp .rp-intro p{
+  max-width:470px;
+
+  margin:0;
+
+  color:#c5d4dd;
 
   font-size:12.5px;
-  line-height:1.55;
+  line-height:1.65;
 }
 
 
@@ -137,7 +152,7 @@
 
   gap:10px;
 
-  margin:19px 0 8px;
+  margin:17px 0 7px;
 
   color:#c4d6df;
 
@@ -146,7 +161,7 @@
   font-size:16px;
   font-weight:400;
 
-  letter-spacing:.3px;
+  letter-spacing:.25px;
 
   text-align:center;
 }
@@ -161,19 +176,21 @@
 }
 
 .rp .rp-h2:before{
-  background:linear-gradient(
-    90deg,
-    transparent,
-    #4a6a7e
-  );
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #4a6a7e
+    );
 }
 
 .rp .rp-h2:after{
-  background:linear-gradient(
-    90deg,
-    #4a6a7e,
-    transparent
-  );
+  background:
+    linear-gradient(
+      90deg,
+      #4a6a7e,
+      transparent
+    );
 }
 
 
@@ -181,74 +198,53 @@
    ONLINE
    ========================================================= */
 
-.rp .rp-online{
-  display:grid;
+.rp .rp-simple{
+  display:flex;
 
-  grid-template-columns:
-    repeat(4,1fr);
+  flex-wrap:wrap;
 
-  border:1px solid rgba(65,88,102,.55);
-  border-radius:6px;
+  gap:0;
 
-  overflow:hidden;
-}
-
-.rp .rp-online > div{
-  padding:7px 9px;
+  padding:7px 11px;
 
   background:rgba(255,255,255,.025);
 
-  border-right:1px solid rgba(65,88,102,.45);
-
-  text-align:center;
+  border-top:1px solid rgba(65,88,102,.55);
+  border-bottom:1px solid rgba(65,88,102,.55);
 }
 
-.rp .rp-online > div:last-child{
-  border-right:none;
+.rp .rp-info-line{
+  display:flex;
+  align-items:baseline;
+
+  gap:7px;
+
+  padding-right:18px;
+
+  color:#c3d2db;
+
+  font-size:12px;
 }
 
-.rp .rp-online span{
-  display:block;
+.rp .rp-info-line + .rp-info-line{
+  padding-left:18px;
 
-  margin-bottom:1px;
+  border-left:1px solid rgba(90,116,131,.35);
+}
 
-  color:#819aa9;
+.rp .rp-label{
+  color:#829aa9;
 
-  font-size:8px;
+  font-size:9px;
 
   letter-spacing:1px;
   text-transform:uppercase;
 }
 
-.rp .rp-online b{
-  color:#c9d8e0;
+.rp .rp-info-line b{
+  color:#d1dfe6;
 
-  font-size:11px;
-  font-weight:500;
-}
-
-
-/* =========================================================
-   TEXT
-   ========================================================= */
-
-.rp .rp-text{
-  margin:8px 1px 0;
-
-  color:#c0d0d9;
-
-  font-size:12.5px;
-  line-height:1.6;
-
-  text-align:justify;
-}
-
-.rp .rp-text p{
-  margin:0 0 6px;
-}
-
-.rp .rp-text p:last-child{
-  margin-bottom:0;
+  font-weight:600;
 }
 
 
@@ -257,53 +253,83 @@
    ========================================================= */
 
 .rp .rp-shop{
-  border:1px solid rgba(65,88,102,.55);
-  border-radius:6px;
-
-  overflow:hidden;
+  border-top:1px solid rgba(65,88,102,.55);
+  border-bottom:1px solid rgba(65,88,102,.55);
 }
 
-.rp .rp-shop-item{
+.rp .rp-shop-row{
   display:flex;
+
   align-items:center;
   justify-content:space-between;
 
-  min-height:34px;
+  min-height:32px;
 
-  padding:5px 10px;
+  padding:4px 10px;
 
-  background:rgba(255,255,255,.025);
-
-  border-bottom:1px solid rgba(65,88,102,.4);
-
-  color:#aebfc9;
+  color:#b9cad3;
 
   font-size:11.5px;
 }
 
-.rp .rp-shop-item:last-child{
-  border-bottom:none;
+.rp .rp-shop-row + .rp-shop-row{
+  border-top:1px solid rgba(65,88,102,.32);
 }
 
-.rp .rp-shop-item strong{
-  color:#e0aaaa;
+.rp .rp-shop-row span{
+  display:flex;
+
+  align-items:baseline;
+
+  gap:8px;
+}
+
+.rp .rp-shop-row b{
+  color:#d2dfe6;
 
   font-weight:600;
 }
 
-.rp .rp-shop-item b{
-  color:#d1dfe6;
+.rp .rp-shop-row small{
+  color:#8198a6;
 
-  font-weight:600;
+  font-size:10px;
 }
 
-.rp .rp-shop-item > strong{
-  color:#e0aaaa;
+.rp .rp-shop-row strong{
+  color:#dda6a6;
+
+  font-size:11.5px;
+  font-weight:600;
 }
 
 
 /* =========================================================
-   TAGS
+   TEXT BLOCKS
+   ========================================================= */
+
+.rp .rp-paragraph{
+  margin:8px 2px 0;
+
+  color:#bdcdd6;
+
+  font-size:12.5px;
+  line-height:1.6;
+}
+
+.rp .rp-paragraph.accent{
+  padding:7px 10px;
+
+  background:rgba(255,255,255,.018);
+
+  border-left:2px solid #617f90;
+
+  color:#b9cbd5;
+}
+
+
+/* =========================================================
+   ABOUT ME
    ========================================================= */
 
 .rp .rp-tags{
@@ -311,11 +337,9 @@
 
   flex-wrap:wrap;
 
-  justify-content:center;
-
   gap:5px;
 
-  margin-bottom:8px;
+  margin:0 0 7px;
 }
 
 .rp .rp-tags span{
@@ -326,30 +350,76 @@
   background:rgba(255,255,255,.025);
 
   border:1px solid #405c6c;
+
   border-radius:10px;
 
   font-size:10px;
 }
 
+.rp .rp-writing{
+  padding:0 2px;
+
+  color:#c1d0d8;
+
+  font-size:12.5px;
+
+  line-height:1.65;
+}
+
+.rp .rp-writing p{
+  margin:0 0 7px;
+}
+
+.rp .rp-writing p:last-child{
+  margin-bottom:0;
+}
+
 
 /* =========================================================
-   ART
+   MY ART
    ========================================================= */
 
 .rp .rp-art{
-  padding:10px 13px;
+  padding:9px 12px;
 
-  color:#c0d0d9;
-
-  background:rgba(255,255,255,.025);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(52,80,95,.18),
+      rgba(16,27,35,.28)
+    );
 
   border-left:2px solid #617f90;
-  border-right:2px solid #617f90;
+  border-right:1px solid rgba(65,88,102,.4);
 
-  border-radius:4px;
+  border-radius:3px;
+
+  color:#c1d0d8;
 
   font-size:12.5px;
-  line-height:1.6;
+
+  line-height:1.65;
+}
+
+.rp .rp-art-title{
+  display:flex;
+  align-items:center;
+
+  gap:8px;
+
+  margin-bottom:5px;
+
+  color:#d1dfe6;
+
+  font-family:'Libre Baskerville',Georgia,serif;
+
+  font-size:12px;
+}
+
+.rp .rp-art-title span{
+  color:#e1a5a5;
+
+  font-size:13px;
 }
 
 .rp .rp-art p{
@@ -358,11 +428,13 @@
 
 .rp .rp-art p:last-child{
   margin-bottom:0;
+
+  color:#aebfc9;
 }
 
 
 /* =========================================================
-   EMPHASIS
+   GENERAL
    ========================================================= */
 
 .rp b{
@@ -370,7 +442,7 @@
 }
 
 .rp i{
-  color:#b8cad4;
+  color:#c0d1da;
 }
 
 
@@ -381,61 +453,68 @@
 @media(max-width:560px){
 
   .rp{
-    padding:10px;
+    padding:9px 10px;
   }
 
   .rp .rp-top{
-    align-items:flex-start;
+    gap:12px;
   }
 
   .rp .rp-photo{
-    flex:0 0 180px;
+    flex:0 0 125px;
 
-    width:180px;
-    height:125px;
+    width:125px;
+    height:165px;
   }
 
   .rp .rp-name{
     font-size:20px;
   }
 
-  .rp .rp-online{
-    grid-template-columns:
-      repeat(2,1fr);
+  .rp .rp-nick{
+    font-size:10px;
   }
 
-  .rp .rp-online > div:nth-child(2){
-    border-right:none;
+  .rp .rp-intro p{
+    font-size:11.5px;
   }
 
-  .rp .rp-online > div:nth-child(-n+2){
-    border-bottom:1px solid rgba(65,88,102,.45);
+  .rp .rp-simple{
+    display:block;
+  }
+
+  .rp .rp-info-line{
+    padding:2px 0;
+  }
+
+  .rp .rp-info-line + .rp-info-line{
+    padding-left:0;
+
+    border-left:none;
   }
 
 }
 
 
-@media(max-width:420px){
+@media(max-width:400px){
 
   .rp .rp-top{
-    flex-direction:column;
-
-    align-items:stretch;
+    align-items:flex-start;
   }
 
   .rp .rp-photo{
-    width:100%;
-    height:180px;
+    flex:0 0 105px;
 
-    flex-basis:180px;
-  }
-
-  .rp .rp-intro{
-    padding:2px 3px 3px;
+    width:105px;
+    height:145px;
   }
 
   .rp .rp-name{
-    font-size:21px;
+    font-size:18px;
+  }
+
+  .rp .rp-intro p{
+    font-size:11px;
   }
 
 }
