@@ -7,9 +7,8 @@
 
 .rp{
   max-width:760px;
-
   margin:0 auto;
-  padding:16px;
+  padding:12px 15px;
 
   background:linear-gradient(
     180deg,
@@ -20,9 +19,8 @@
   color:#dbe6ee;
 
   font-family:'Nunito Sans','Segoe UI',Arial,sans-serif;
-
-  font-size:14px;
-  line-height:1.55;
+  font-size:13px;
+  line-height:1.5;
 
   border:1px solid #2f4658;
   border-radius:8px;
@@ -38,24 +36,21 @@
 
 
 /* =========================================================
-   TOP / INTRO
+   HEADER
    ========================================================= */
 
 .rp .rp-top{
   display:flex;
+  align-items:center;
 
   gap:18px;
 
-  min-height:190px;
-
-  padding:12px;
+  padding:9px;
 
   background:#0d151c;
 
   border:1px solid #4a6a7e;
   border-radius:6px;
-
-  overflow:hidden;
 }
 
 
@@ -64,22 +59,19 @@
    ========================================================= */
 
 .rp .rp-photo{
-  flex:0 0 165px;
+  flex:0 0 235px;
 
-  width:165px;
-  height:165px;
-
-  margin:auto 0;
+  width:235px;
+  height:155px;
 
   overflow:hidden;
 
   background:#1f3140;
 
-  border:3px solid #6f8fa6;
-  border-radius:14px;
+  border:2px solid #6f8fa6;
+  border-radius:9px;
 
-  box-shadow:
-    0 0 18px rgba(111,143,166,.28);
+  box-shadow:0 0 12px rgba(111,143,166,.25);
 }
 
 .rp .rp-photo img{
@@ -89,65 +81,49 @@
   height:100%;
 
   object-fit:cover;
+  object-position:center;
 
-  border-radius:10px;
+  border-radius:7px;
 }
 
 
 /* =========================================================
-   INTRO TEXT
+   INTRO
    ========================================================= */
 
 .rp .rp-intro{
   flex:1;
-
   min-width:0;
-
-  padding:8px 8px 8px 4px;
 }
 
 .rp .rp-name{
-  margin:0;
-
   color:#e1a5a5;
 
   font-family:'Libre Baskerville',Georgia,serif;
 
-  font-size:25px;
+  font-size:24px;
   font-weight:700;
 
-  line-height:1.25;
+  line-height:1.15;
 }
 
 .rp .rp-nick{
-  margin-top:2px;
-
-  color:#b9cbd5;
-
-  font-family:'Libre Baskerville',Georgia,serif;
-
-  font-size:16px;
-}
-
-.rp .rp-age{
   margin-top:2px;
 
   color:#8fa8b7;
 
   font-size:11px;
 
-  letter-spacing:1.5px;
-  text-transform:uppercase;
+  letter-spacing:.8px;
 }
 
 .rp .rp-intro p{
-  margin:15px 0 0;
+  margin:11px 0 0;
 
   color:#c7d6de;
 
-  font-size:13px;
-
-  line-height:1.65;
+  font-size:12.5px;
+  line-height:1.55;
 }
 
 
@@ -159,18 +135,18 @@
   display:flex;
   align-items:center;
 
-  gap:14px;
+  gap:10px;
 
-  margin:28px 0 12px;
+  margin:19px 0 8px;
 
   color:#c4d6df;
 
   font-family:'Libre Baskerville',Georgia,serif;
 
-  font-size:18px;
+  font-size:16px;
   font-weight:400;
 
-  letter-spacing:.4px;
+  letter-spacing:.3px;
 
   text-align:center;
 }
@@ -185,21 +161,19 @@
 }
 
 .rp .rp-h2:before{
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      #4a6a7e
-    );
+  background:linear-gradient(
+    90deg,
+    transparent,
+    #4a6a7e
+  );
 }
 
 .rp .rp-h2:after{
-  background:
-    linear-gradient(
-      90deg,
-      #4a6a7e,
-      transparent
-    );
+  background:linear-gradient(
+    90deg,
+    #4a6a7e,
+    transparent
+  );
 }
 
 
@@ -213,64 +187,64 @@
   grid-template-columns:
     repeat(4,1fr);
 
-  gap:7px;
+  border:1px solid rgba(65,88,102,.55);
+  border-radius:6px;
 
-  margin:0;
+  overflow:hidden;
 }
 
-.rp .rp-online-item{
-  min-width:0;
-
-  padding:10px 9px;
+.rp .rp-online > div{
+  padding:7px 9px;
 
   background:rgba(255,255,255,.025);
 
-  border:1px solid rgba(65,88,102,.55);
-
-  border-radius:7px;
+  border-right:1px solid rgba(65,88,102,.45);
 
   text-align:center;
 }
 
-.rp .rp-label{
+.rp .rp-online > div:last-child{
+  border-right:none;
+}
+
+.rp .rp-online span{
   display:block;
 
-  margin-bottom:3px;
+  margin-bottom:1px;
 
-  color:#8fa8b7;
+  color:#819aa9;
 
-  font-size:9px;
+  font-size:8px;
 
-  letter-spacing:1.4px;
+  letter-spacing:1px;
   text-transform:uppercase;
 }
 
-.rp .rp-value{
-  display:block;
-
+.rp .rp-online b{
   color:#c9d8e0;
 
-  font-size:12px;
+  font-size:11px;
+  font-weight:500;
 }
 
 
 /* =========================================================
-   GENERAL TEXT
+   TEXT
    ========================================================= */
 
 .rp .rp-text{
-  color:#c7d6de;
+  margin:8px 1px 0;
 
-  font-size:13.5px;
+  color:#c0d0d9;
 
-  line-height:1.7;
+  font-size:12.5px;
+  line-height:1.6;
 
   text-align:justify;
-  text-justify:inter-word;
 }
 
 .rp .rp-text p{
-  margin:0 0 10px;
+  margin:0 0 6px;
 }
 
 .rp .rp-text p:last-child{
@@ -283,99 +257,53 @@
    ========================================================= */
 
 .rp .rp-shop{
-  display:flex;
+  border:1px solid rgba(65,88,102,.55);
+  border-radius:6px;
 
-  flex-direction:column;
-
-  gap:7px;
-
-  margin-bottom:13px;
+  overflow:hidden;
 }
 
 .rp .rp-shop-item{
   display:flex;
-
   align-items:center;
   justify-content:space-between;
 
-  gap:15px;
+  min-height:34px;
 
-  padding:10px 13px;
+  padding:5px 10px;
 
   background:rgba(255,255,255,.025);
 
-  border:1px solid rgba(65,88,102,.55);
-
-  border-radius:7px;
-
-  transition:
-    background .2s ease,
-    border-color .2s ease;
-}
-
-.rp .rp-shop-item:hover{
-  background:rgba(255,255,255,.045);
-
-  border-color:#456273;
-}
-
-.rp .rp-shop-item > div{
-  display:flex;
-
-  align-items:baseline;
-
-  gap:9px;
-}
-
-.rp .rp-shop-name{
-  color:#d4e1e8;
-
-  font-size:13px;
-  font-weight:600;
-}
-
-.rp .rp-shop-desc{
-  color:#899faa;
-
-  font-size:11px;
-}
-
-.rp .rp-price{
-  color:#e0aaaa;
-
-  font-size:13px;
-  font-weight:600;
-
-  white-space:nowrap;
-}
-
-
-/* =========================================================
-   NOTE
-   ========================================================= */
-
-.rp .rp-note{
-  margin-top:13px;
-
-  padding:10px 14px;
+  border-bottom:1px solid rgba(65,88,102,.4);
 
   color:#aebfc9;
 
-  font-size:12.5px;
+  font-size:11.5px;
+}
 
-  text-align:center;
+.rp .rp-shop-item:last-child{
+  border-bottom:none;
+}
 
-  background:rgba(255,255,255,.025);
+.rp .rp-shop-item strong{
+  color:#e0aaaa;
 
-  border-left:2px solid #617f90;
-  border-right:2px solid #617f90;
+  font-weight:600;
+}
 
-  border-radius:4px;
+.rp .rp-shop-item b{
+  color:#d1dfe6;
+
+  font-weight:600;
+}
+
+.rp .rp-shop-item > strong{
+  color:#e0aaaa;
 }
 
 
 /* =========================================================
-   INTEREST TAGS
+   TAGS
    ========================================================= */
 
 .rp .rp-tags{
@@ -385,33 +313,22 @@
 
   justify-content:center;
 
-  gap:7px;
+  gap:5px;
 
-  margin-bottom:14px;
+  margin-bottom:8px;
 }
 
 .rp .rp-tags span{
-  padding:5px 11px;
+  padding:3px 9px;
 
-  color:#bfd0da;
+  color:#b9cbd5;
 
   background:rgba(255,255,255,.025);
 
   border:1px solid #405c6c;
+  border-radius:10px;
 
-  border-radius:12px;
-
-  font-size:11px;
-
-  transition:
-    background .2s ease,
-    border-color .2s ease;
-}
-
-.rp .rp-tags span:hover{
-  background:rgba(255,255,255,.05);
-
-  border-color:#5c7788;
+  font-size:10px;
 }
 
 
@@ -420,84 +337,33 @@
    ========================================================= */
 
 .rp .rp-art{
-  display:flex;
+  padding:10px 13px;
 
-  align-items:flex-start;
+  color:#c0d0d9;
 
-  gap:17px;
+  background:rgba(255,255,255,.025);
 
-  padding:16px;
+  border-left:2px solid #617f90;
+  border-right:2px solid #617f90;
 
-  background:
-    linear-gradient(
-      145deg,
-      rgba(52,80,95,.24),
-      rgba(16,27,35,.42)
-    );
+  border-radius:4px;
 
-  border:1px solid #395464;
-
-  border-radius:9px;
-
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.035);
+  font-size:12.5px;
+  line-height:1.6;
 }
 
-.rp .rp-art-mark{
-  flex:0 0 42px;
-
-  width:42px;
-  height:42px;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  color:#e1a5a5;
-
-  border:1px solid #6f8fa6;
-
-  border-radius:50%;
-
-  font-family:'Libre Baskerville',Georgia,serif;
-
-  font-size:18px;
+.rp .rp-art p{
+  margin:0 0 6px;
 }
 
-.rp .rp-art-text{
-  flex:1;
-
-  min-width:0;
-
-  color:#c7d6de;
-
-  font-size:13.5px;
-
-  line-height:1.7;
-}
-
-.rp .rp-art-text p{
-  margin:0 0 9px;
-}
-
-.rp .rp-art-text p:last-child{
+.rp .rp-art p:last-child{
   margin-bottom:0;
 }
 
 
 /* =========================================================
-   LINKS / BOLD / ITALIC
+   EMPHASIS
    ========================================================= */
-
-.rp a{
-  color:#d9a4a4;
-
-  text-decoration:none;
-}
-
-.rp a:hover{
-  color:#efbaba;
-}
 
 .rp b{
   color:#d5e2e9;
@@ -515,40 +381,22 @@
 @media(max-width:560px){
 
   .rp{
-    padding:12px;
+    padding:10px;
   }
 
   .rp .rp-top{
-    flex-direction:column;
-
-    align-items:center;
-
-    min-height:0;
-
-    padding:14px;
+    align-items:flex-start;
   }
 
   .rp .rp-photo{
-    width:150px;
-    height:150px;
+    flex:0 0 180px;
 
-    flex-basis:150px;
-  }
-
-  .rp .rp-intro{
-    width:100%;
-
-    padding:3px 4px 5px;
-
-    text-align:center;
+    width:180px;
+    height:125px;
   }
 
   .rp .rp-name{
-    font-size:23px;
-  }
-
-  .rp .rp-intro p{
-    text-align:left;
+    font-size:20px;
   }
 
   .rp .rp-online{
@@ -556,35 +404,38 @@
       repeat(2,1fr);
   }
 
-  .rp .rp-shop-item > div{
-    flex-direction:column;
-
-    align-items:flex-start;
-
-    gap:0;
+  .rp .rp-online > div:nth-child(2){
+    border-right:none;
   }
 
-  .rp .rp-art{
-    gap:12px;
+  .rp .rp-online > div:nth-child(-n+2){
+    border-bottom:1px solid rgba(65,88,102,.45);
   }
 
 }
 
 
-@media(max-width:360px){
+@media(max-width:420px){
 
-  .rp .rp-online{
-    grid-template-columns:1fr;
-  }
-
-  .rp .rp-art{
+  .rp .rp-top{
     flex-direction:column;
 
-    align-items:center;
+    align-items:stretch;
   }
 
-  .rp .rp-art-text{
-    text-align:center;
+  .rp .rp-photo{
+    width:100%;
+    height:180px;
+
+    flex-basis:180px;
+  }
+
+  .rp .rp-intro{
+    padding:2px 3px 3px;
+  }
+
+  .rp .rp-name{
+    font-size:21px;
   }
 
 }
